@@ -9,6 +9,15 @@ import (
 	"github.com/inlets/inletsctl/pkg/provision"
 )
 
+// this could be sourced from imported inlets repo
+var defaultParams = map[string]map[string]interface{}{
+	"packet": {
+		"plan":   "t1.small.x86",
+		"region": "ewr1",
+		"os":     "ubuntu_16_04",
+	},
+}
+
 func baseHostSchema() map[string]*schema.Schema {
 	return map[string]*schema.Schema{
 		"region": {
@@ -58,15 +67,6 @@ func baseHostSchema() map[string]*schema.Schema {
 			Computed: true,
 		},
 	}
-}
-
-// this could be sourced from imported inlets repo
-var defaultParams = map[string]map[string]interface{}{
-	"packet": {
-		"plan":   "t1.small.x86",
-		"region": "ewr1",
-		"os":     "ubuntu_16_04",
-	},
 }
 
 func getParam(d *schema.ResourceData, typ, paramName string) (interface{}, error) {

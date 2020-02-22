@@ -30,3 +30,7 @@ resource "inlets_packet" test {
 }
 ```
 
+Notes
+--------------
+The provider assumes a lot of defaults, see the top of [host_common.go](inlets/host_common.go)
+
