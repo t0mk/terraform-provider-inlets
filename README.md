@@ -20,7 +20,7 @@ Only `inlets_packet` is working right now. To run a host in Packet, you should
 - export your Packet API token to PACKET_AUTH_TOKEN envvar
 - choose a project where you want to run the host and find out its UUID
 - put userdata to `./userdata.yml`
-- use following ttemplate:
+- use following template to create a node and show its IP address:
 
 ```hcl
 resource "inlets_packet" test {
@@ -28,6 +28,12 @@ resource "inlets_packet" test {
     userdata = file("./userdata.yml") 
     additional = {"project_id": "52123fb2-ee46-4673-93a8-de2c2bdba33b"}
 }
+
+
+output "inlets_packet_node_ip" {
+  value = inlets_packet.test.ip
+}
+
 ```
 
 Notes
