@@ -11,7 +11,7 @@ Run `make` to install.
 Using the provider
 ----------------------
 
-After you installed (with `make` in root of this repo), go to your Terraform directory and run `tf init -plugin-dir $GOPATH/bin`.
+After you installed (with `make` in root of this repo), go to your Terraform templates directory and run `tf init -plugin-dir $GOPATH/bin`.
 
 Example
 ---------------------------
