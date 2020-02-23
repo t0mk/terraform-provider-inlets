@@ -13,6 +13,7 @@ Using the provider
 
 After you installed (with `make` in root of this repo), go to your Terraform templates directory and run `tf init -plugin-dir $GOPATH/bin`.
 
+
 Example
 ---------------------------
 
@@ -35,6 +36,8 @@ output "inlets_packet_node_ip" {
 }
 
 ```
+
+See output of `terraform plan` and run `terraform apply`.
 
 Notes
 --------------
